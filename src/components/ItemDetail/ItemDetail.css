@@ -1,0 +1,22 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+
+    width: 300px;
+    height: 400px;
+}
+
+.card-img-top{
+    width: 200px;
+}
+
+.boton-item{
+    font-family: 'Cooper Hewitt Semibold';
+border-radius: 5px, solid, blue;
+    margin: 10px;
+    background-color: #9cafb7;
+}

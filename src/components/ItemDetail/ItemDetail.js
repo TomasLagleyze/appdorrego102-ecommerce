@@ -1,5 +1,7 @@
 import './ItemDetail.css'
-const ItemDetail = ({ marca , modelo, lado, precio, imagen, categoria})=>{
+import ItemCount from '../ItemCount/ItemCount'
+
+const ItemDetail = ({id, marca , modelo, lado, precio, imagen, categoria, stock})=>{
 
 
     return(
@@ -15,7 +17,11 @@ const ItemDetail = ({ marca , modelo, lado, precio, imagen, categoria})=>{
     <li class="list-group-item">{lado}</li>
     <li class="list-group-item">Precio:${precio}</li>
   </ul>
-  <button>Agregar al carrito</button>
+  <div>
+  </div>
+
+
+
             </div>
       
    
@@ -23,3 +29,5 @@ const ItemDetail = ({ marca , modelo, lado, precio, imagen, categoria})=>{
 }
 
 export default ItemDetail
+
+/* <ItemCount stock = {product.stock} initial ={1}/> */

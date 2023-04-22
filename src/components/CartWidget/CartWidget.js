@@ -1,13 +1,17 @@
 import './CartWidget.css'
 import cart from './assets/carro-de-la-carretilla.png'
-const CartWidget = () =>{
-return(
-    <div>
-        <img className='carrito' src={cart}  alt='carrito'/>
-        0
-    </div>
-)
+import { useCart } from '../../context/CartContext';
 
+const CartWidget = () => {
+
+    const { totalQuantity } = useCart()
+
+    return(
+        <div to='/cart' className="CartWidget">
+            <img src={cart} alt='cart-widget' className='CartImg'/>
+            {totalQuantity}
+        </div>
+    );
 }
 
 export default CartWidget

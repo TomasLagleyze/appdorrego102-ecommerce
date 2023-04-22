@@ -1,11 +1,14 @@
-
+@font-face {
+    font-family: 'Cooper';
+    src: url(../navbar/assets/CooperHewitt-BoldItalic.ttf);
+}
 
 .Navbar{
     display: flex;
     justify-content: space-between;
     height: 150px;
     padding: 20px;
-    background-color: #BAD9F8;
+    background-color: #2d6096;
     align-items: center;
 }
 
@@ -15,9 +18,10 @@
 }
 
 
-.Titulo-principal{
-    font-family: Helvetica;
+.titulo-principal{
+    font-family: 'Cooper', sans-serif;
     align-self: center;
+    letter-spacing: 5px;
 }
 
 .botonesnav-container{

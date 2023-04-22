@@ -1,9 +1,11 @@
 import './Item.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link,  } from 'react-router-dom'
+
 
 const Item = ({id, marca , modelo, lado, precio, imagen, categoria})=>{
 
-const navigate = useNavigate ()
+
+
 
     return(
 

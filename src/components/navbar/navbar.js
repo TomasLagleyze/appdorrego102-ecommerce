@@ -2,22 +2,43 @@ import './navbar.css'
 import logo from './assets/img/LOGO-DORREGO-102.png'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { collection, getDocs, query, orderBy } from 'firebase/firestore'
+import { db } from '../../services/firebase/firebaseConfig'
 
-const Navbar = () =>{
-return(
-    <nav className='Navbar'>
+
+const NavBar = () => {
+    const [categorias, setCategorias] = useState([])
+  
+    useEffect(() => {
+      const categoriasRef = query(collection(db, 'categorias'), orderBy('label', 'asc'))
+  
+      getDocs(categoriasRef)
+        .then(snapshot => {
+          const categoriasAdapted = snapshot.docs.map(doc => {
+            const data = doc.data()
+            return { id: doc.id, ...data}
+          })
+          setCategorias(categoriasAdapted)
+        })
+    }, [])
+  
+    console.log(categorias)
+    return (
+      <nav className="Navbar" >
         <img className='logo' src={logo} alt='logo' />
-<h1 className='titulo-principal'> DORREGO 102</h1>
-        <div className='botonesnav-container'>
-        <Link className='inicio' to='/'>Todas</Link>
-        <NavLink to='/categoria/Faros' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option-boton'}>Faros</NavLink>
-            <NavLink to='/categoria/Opticas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option-boton'}>Opticas</NavLink>
-            <NavLink to='/categoria/Paragolpes' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option-boton'}>Paragolpes</NavLink>
-    </div>
-    <CartWidget/>
-    </nav>
-)
+        <Link to='/' className='titulo-principal'>DORREGO 102 - TU LOCAL DE AUTOPARTES</Link>
+          <div className="Categorias">
+            {
+              categorias.map(cat => {
+                return <NavLink key={cat.id} to={`/categoria/${cat.slug}`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>{cat.label}</NavLink>
+              })
+            }
+          </div>
+          <CartWidget />
+      </nav>
+    )
+  }
+  
+  export default NavBar
 
-}
-
-export default Navbar

@@ -1,5 +1,6 @@
 import{useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
+import './ItemListContainer.css'
 // import { getProducts, getProductsByCategoria } from "../../asyncMock"
 import ItemList from '../ItemList/ItemList'
 import { getDocs, collection, query, where } from 'firebase/firestore'
@@ -53,7 +54,7 @@ getDocs(productsRef)
 
     useEffect(() => {
         setTimeout(() => {
-            setTitle('Segundo titulo')
+            setTitle()
         }, 2000)
     }, [])
 
@@ -68,7 +69,7 @@ getDocs(productsRef)
 
     return(
   <div>
-     <h1>{greeting}</h1>
+     <h1 className='texto-intro'>{greeting}</h1>
      <h2>{title}</h2>
               <ItemList  products = {products}/>
               </div>

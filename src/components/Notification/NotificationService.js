@@ -3,8 +3,8 @@ import { useState, createContext, useContext } from 'react';
 const Notification = ({type, message}) =>{
     const notificationStyle = {
   position: 'absolute',
-  top: 100,
-  right: 50,
+  top: 750,
+  right: 575,
   backgroundColor: type === 'success' ? 'green' : 'red',
   color: 'white',
   padding: '10px 20px 10px 20px',
@@ -30,7 +30,7 @@ export const NotificationProvider = ({children}) =>{
         text: ''
           })
 
-    const setNotification = (type, text, time = 2) =>{
+    const setNotification = (type, text, time) =>{
         setNotificationData ({type, text})
         setTimeout(() => {
           setNotification ({type, text: ''})

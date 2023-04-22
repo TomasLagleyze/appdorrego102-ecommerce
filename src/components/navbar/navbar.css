@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cooper';
-    src: url(../navbar/assets/CooperHewitt-BoldItalic.ttf);
+    src: url(../navbar/assets/CooperHewitt-Bold.ttf)
 }
 
 .Navbar{
@@ -22,6 +22,9 @@
     font-family: 'Cooper', sans-serif;
     align-self: center;
     letter-spacing: 5px;
+    text-decoration: none;
+    font-size: 40px;
+    color: rgb(93, 209, 194);
 }
 
 .botonesnav-container{
@@ -33,7 +36,7 @@
 .inicio{
     font-size: 20px;
     color: black;
-    background-color: white;
+    background-color: rgb(143, 202, 197);
     text-decoration: none;
     font-family: 'Cooper Hewitt Semibold';
     border-radius: 10px;
@@ -45,7 +48,7 @@
     color: blueviolet;
     background-color: beige;
     text-decoration: none;
-    font-family: 'Cooper Hewitt Semibold';
+    font-family: 'Cooper';
     border-radius: 10px;
 }
 
@@ -54,8 +57,9 @@
 .Option-boton{
     font-size: 20px;
     color: black;
-    background-color: white;
+    background-color: rgb(143, 202, 197);
     text-decoration: none;
-    font-family: 'Cooper Hewitt Semibold';
+    font-family: 'Cooper';
     border-radius: 10px;
+
 }

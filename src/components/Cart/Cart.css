@@ -1,0 +1,29 @@
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 25px;
+}
+
+.cart-subcontainer{
+    border: 10px, solid, red;
+    padding: 5px;
+    background-color: rgb(22, 40, 122);
+
+}
+
+.texto1{
+    font-family: 'Cooper';
+    font-size: 30px;
+    color: white;
+}
+
+
+.texto2{
+    font-family: 'Cooper';
+    font-size: 25px;
+    color: white;
+}

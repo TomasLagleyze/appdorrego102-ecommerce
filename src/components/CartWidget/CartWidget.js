@@ -9,7 +9,9 @@ const CartWidget = () => {
     return(
         <div to='/cart' className="CartWidget">
             <img src={cart} alt='cart-widget' className='CartImg'/>
+            <div className='cantidad-letra'>
             {totalQuantity}
+            </div>
         </div>
     );
 }

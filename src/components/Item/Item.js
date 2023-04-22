@@ -20,7 +20,7 @@ const Item = ({id, marca , modelo, lado, precio, imagen, categoria})=>{
     <li class="list-group-item">{lado}</li>
     <li class="list-group-item">Precio:${precio}</li>
   </ul>
-  <Link to={`/item/${id}`} className='Option'>Ver detalle</Link>
+  <Link to={`/item/${id}`} className='Option' >DETALLE DE PRODUCTO</Link>
             </div>
    
     )

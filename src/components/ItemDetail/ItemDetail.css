@@ -20,3 +20,12 @@ border-radius: 5px, solid, blue;
     margin: 10px;
     background-color: #9cafb7;
 }
+
+.link-compra{
+    text-decoration: none;
+    font-size: 20px;
+    color: rebeccapurple;
+    font-family: 'Cooper';
+    margin-top: 15px;
+    border: 5px;
+}

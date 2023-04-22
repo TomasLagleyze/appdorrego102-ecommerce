@@ -1,0 +1,15 @@
+
+.texto12{
+    margin-top: 10px;
+    font-family: 'Cooper';
+    font-size: 25px;
+}
+
+.Checkout{
+    text-decoration: none;
+    font-size:25px;
+    color: white;
+    font-family: 'Cooper';
+    background-color: rgb(128, 138, 199);
+
+}

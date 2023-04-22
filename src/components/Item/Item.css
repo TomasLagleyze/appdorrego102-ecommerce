@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Cooper';
+    src: url(../Item/assets/CooperHewitt-Medium.ttf);
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -18,5 +23,15 @@
     font-family: 'Cooper Hewitt Semibold';
 border-radius: 5px, solid, blue;
     margin: 10px;
+    background-color: #9cafb7;
+}
+
+.Option{
+    font-family: 'Cooper';
+    font-size: 20px;
+    text-decoration: none;
+    color: #2d6096;
+    margin: 5px;
+    border-radius: 2px solid #808cb4;
     background-color: #9cafb7;
 }

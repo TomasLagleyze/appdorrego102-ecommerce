@@ -14,7 +14,7 @@
     width: auto;
     padding: 12px;
     font-size: 8px;
-    background: #8C30F5;
+    background: #a796bb;
     border-radius: 8px;
     display: flex;
     align-self: center;
@@ -40,4 +40,14 @@
 .Controls {
     display: flex;
     justify-content: center;
+}
+
+.container-botones-carrito{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-top: 10px;
+    
 }

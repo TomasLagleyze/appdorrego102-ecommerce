@@ -1,28 +1,30 @@
 import { useCart } from "../../context/CartContext"
 import { Link } from 'react-router-dom'
+import './Cart.css'
 
 const Cart = () => {
-    const { cart, total } = useCart()
+    const { cart, total , clearCart} = useCart()
 
     return (
-        <div>
-            <h1>Cart View</h1>
-            <div>
-                {
-                    cart.map(prod => {
+        <div className="cart-container">
+            <section className="cart-subcontainer">
+            <h1 className="texto1">DETALLE DE COMPRA</h1>
+            <div >
+                { cart.map(prod => {
                         return (
                             <div key={prod.id}>
-                                <h2>{prod.marca}</h2>
-                                <h2>Cantidad: {prod.cantidad}</h2>
-                                <h2>${prod.precio} x Unidad</h2>
+                                <h2 className="texto2">{prod.marca}</h2>
+                                <h2 className="texto2">Cantidad: {prod.cantidad}</h2>
+                                <h2 className="texto2">${prod.precio} x Unidad</h2>
                             </div>
                         )
                     })
                 }
             </div>
-
-            <h1>Total de la compra ${total}</h1>
-            <Link to='/checkout' className="Option">Checkout</Link>
+            <button className="Option" onClick={() => clearCart()}>Vaciar carrito</button>
+            <h1 className="texto2">Total de la compra: ${total}</h1>
+            <Link to='/checkout' className="Checkout">CHECKOUT</Link>
+            </section>
         </div>
     )
 }

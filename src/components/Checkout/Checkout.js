@@ -3,8 +3,9 @@ import { useCart } from "../../context/CartContext"
 import { db } from "../../services/firebase/firebaseConfig"
 import { useState } from 'react'
 import {useNotification} from '../Notification/NotificationService'
-
 import { useNavigate } from "react-router-dom"
+import ContactForm from "../ContactForm/ContactForm"
+import './Checkout.css'
 
 const Checkout = () => {
     const [orderId, setOrderId] = useState('')
@@ -19,15 +20,12 @@ const Checkout = () => {
         try {
             setLoading(true)
             const objOrder = {
-                // buyer: userData
-                buyer: {
-                    name: 'Sebastian Zuviria',
-                    phone: '123456789',
-                    email: 'contact@sebaz.io'
-                },
+                buyer: userData,
                 items: cart,
                 total
-            }
+                }
+            
+            
     
             const ids = cart.map(prod => prod.id)
     
@@ -93,11 +91,12 @@ const Checkout = () => {
     }
 
     return (
-        <div>
-            <h1>Checkout</h1>
-            <h2>Ingrese sus datos</h2>
+        <div className="pag-form-container">
+            <h1 className="texto12">CHECKOUT</h1>
+            <h2 className="texto12">INGRESE SUS DATOS</h2>
+            <ContactForm  onConfirm={createOrder}/>
             {/* <Form onConfirm={createOrder}/> */}
-            <button onClick={createOrder}>Crear orden</button>
+            {/* <button onClick={createOrder}>Crear orden</button> */}
         </div>
     )
 }
